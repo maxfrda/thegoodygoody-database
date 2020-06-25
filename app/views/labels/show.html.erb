@@ -1,0 +1,7 @@
+<h1>Name: <%= @label.name %></h1>
+<h2>id: <%= @label.id %></h2>
+<h2>releases:</h2>
+
+<% @label.releases.each do |release| %>
+<p> <%= release.title %></p>
+<% end %>

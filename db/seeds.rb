@@ -18,3 +18,9 @@ artist_parser.parse(File.read(artist_file))
 label_parser = Nokogiri::HTML::SAX::Parser.new(LabelParser.new('label'))
 label_file = File.join(__dir__, '/xmls/label_test.xml')
 label_parser.parse(File.read(label_file))
+
+
+release_parser = Nokogiri::HTML::SAX::Parser.new(ReleaseParser.new('release'))
+release_file = File.join(__dir__, '/xmls/release_test.xml')
+
+release_parser.parse(File.read(release_file))
