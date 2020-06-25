@@ -9,6 +9,11 @@ class LabelsController < ApplicationController
     @labels = Label.all
   end
 
+  def show
+    @label = Label.find(params[:id])
+  end
+
+
   private
 
   def label_params

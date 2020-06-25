@@ -1,0 +1,22 @@
+<% @releases.each do |release| %>
+<h1>Release Name: <%= release.title %></h1>
+
+    <h2>Artist: <%= link_to release.artist.name, artist_path(release.artist.id) %></h2>
+    <h2>Label: <%= link_to release.label.name, label_path(release.label.id) %></h2>
+
+    <h2>Year:<%= release.year %></h2>
+    <h2>Genre:<%= release.genre %></h2>
+    <h2>Descriptions:</h2>
+    <% release.format.each do |description| %>
+      <ul>
+        <li><%= description %></li>
+      </ul>
+    <% end %>
+
+  <h2>Tracklist</h2>
+  <% release.tracklist.each do |song| %>
+   <ul>
+    <li><%= song %></li>
+  </ul>
+  <% end %>
+<% end %>

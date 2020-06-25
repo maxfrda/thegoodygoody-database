@@ -1,0 +1,8 @@
+<h1>Name: <%= @artist.name %></h1>
+<h2>id: <%= @artist.id %></h2>
+<h2>discogs_id: <%= @artist.discogs_id %></h2>
+<h2>releases:</h2>
+
+<% @artist.releases.each do |release| %>
+<p> <%= release.title %></p>
+<% end %>
